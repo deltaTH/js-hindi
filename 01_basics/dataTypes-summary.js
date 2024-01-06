@@ -21,10 +21,10 @@ let userEmail;
 
 const id = Symbol('123')
 const anotherId = Symbol('123')
-console.log(id===anotherId);
+// console.log(id===anotherId);
 
 const bigNumber = 9632587412589631n
-console.log(typeof bigNumber);
+// console.log(typeof bigNumber);
 
 // Reference type (non-Primitive) - Array, Objects, Functions
 
@@ -40,3 +40,29 @@ const myfunc = function (){
 }
 
 //https://262.ecma-international.org/5.1/#sec-11.4.3
+
+// _____________________________Stack and Heap memory_________________________________________
+/* 
+Stack (Primitive) - bole toh copy milta sabka
+Heap (Non- Primitive) - direct address pe kaam
+*/
+
+let youtubeName = "Abnohme"
+let anotherName = youtubeName
+anotherName = "deltaTH"
+
+console.log(youtubeName);
+console.log(anotherName);
+
+let userOne = {
+    name : "Abhay",
+    email : "abhay@gmail.com"
+}
+
+let userTwo = userOne;
+
+userTwo.name = "delta"
+
+console.log(userOne.name);
+console.log(userTwo.name);
+
